@@ -16,8 +16,8 @@
 
 /* Make sure we have New Zealand in these */
 $countries = array(
-                array('NZ', 'New Zealand', 'newzealand_nth', 'newzealand_nth', 'yes', 'no')
+                array('NZ', 'New Zealand', 'newzealand_nth', 'newzealand_nth', 'yes', 'yes', 'no')
                 );
 foreach ($countries as $country) {
-    Jojo::updateQuery('REPLACE INTO {cart_country} SET countrycode=?, name=?, region=?, defaultregion=?, special = ?, hasstates = ?', $country);
+    Jojo::updateQuery('REPLACE INTO {cart_country} SET countrycode=?, name=?, region=?, defaultregion=?, special = ?, applytax = ?, hasstates = ?', $country);
 }
